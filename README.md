@@ -9,6 +9,10 @@ This is a C++ implementation of a sparse matrix class, with the possibility to d
 - The class provides methods to resize the matrix, access elements, compress and uncompress the matrix, read the matrix from a file, and print the matrix.
 - The class overloads the multiplication operator to support multiplication with a vector and with another matrix.
 
+## Notes
+The multiplication operation is performed differently based on whether the matrices are compressed or not and the storage order. If the dimensions do not match, an exception is thrown.
+To avoid repetitions and similar functions, the multiplication between matrixes is only implemented when the result matrix is in row-wise ordering and the input matrixes are in the same compress or uncompress state.
+
 ## Usage
 
 ```
@@ -50,7 +54,3 @@ algebra::Matrix<int, 0> otherMatrix(10, 10);
 algebra::Matrix<int, 0> resultMatrix = matrix * otherMatrix;
 
 ```
-
-## Notes
-The multiplication operation is performed differently based on whether the matrices are compressed or not and the storage order. If the dimensions do not match, an exception is thrown.
-To avoid repetitions and similar functions, the multiplication between matrixes is only implemented when the result matrix is in row-wise ordering and the input matrixes are in the same compress or uncompress state.
