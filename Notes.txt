@@ -1,0 +1,8 @@
+- use git to keep track of your work, not only for submission
+
+- no test with complex type
+- no gain in computational time after compression
+
+- you can use an enumerator for the template parameter StorageOrder
+- when you perform operations that should not be done in compressed format, display a warning and then re-compress the matrix at the end
+
